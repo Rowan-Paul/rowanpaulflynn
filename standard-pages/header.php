@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage | Rowan-Paul Flynn</title>
+    <title><?php echo $title ?> | Rowan-Paul Flynn</title>
 
     <link rel="stylesheet" type="text/css" href="assets/style.css">
     <script src="assets/main.js"></script>
@@ -15,19 +15,19 @@
 <body>
     <header>
         <div class="topnav" id="myTopnav">
-
-            <a href="index.php" <?php if ($title == 'home') {
-                                    echo "class ='active'";
-                                } ?>>Home</a>
-            <a href="about.php" <?php if ($title == 'php') {
-                                    echo "class ='active'";
-                                } ?>>About me</a>
-            <a href="blog.php" <?php if ($title == 'blog') {
-                                    echo "class ='active'";
-                                } ?>>Blog</a>
-            <a href="contact.php" <?php if ($title == 'contact') {
+            <p>Rowan-Paul Flynn</p>
+            <a href="contact.php" <?php if ($title == 'Contact') {
                                         echo "class ='active'";
                                     } ?>>Contact</a>
+            <a href="blog.php" <?php if ($title == 'Blog') {
+                                    echo "class ='active'";
+                                } ?>>Blog</a>
+            <a href="about.php" <?php if ($title == 'About') {
+                                    echo "class ='active'";
+                                } ?>>About</a>
+            <a href="index.php" <?php if ($title == 'Homepage') {
+                                    echo "class ='active'";
+                                } ?>>Home</a>
 
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
