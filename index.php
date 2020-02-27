@@ -1,6 +1,6 @@
 <?php
-  $title = "Startpagina";
-  include_once 'standard-pages/header.php';
+$title = "home";
+include_once 'standard-pages/header.php';
 ?>
 
 <main>
@@ -9,5 +9,5 @@
 </main>
 
 <?php
-  include_once 'standard-pages/footer.php';
+include_once 'standard-pages/footer.php';
 ?>
