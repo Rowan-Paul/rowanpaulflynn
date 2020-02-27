@@ -24,6 +24,23 @@ footer {
     margin: 1em 1em 0em;
 }
 
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 5em;
+    text-align: center;
+}
+
+.sub-title {
+    font-weight: bold;
+    text-align: center;
+}
+
 /******************/
 
 /* Navigation bar */
