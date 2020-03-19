@@ -27,7 +27,6 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
         <li>Fletnix database in MSSQL</li>
         <li>This website in HTML, CSS, Javascript and MySQL</li>
     </ul>
-
 </main>
 
 <?php

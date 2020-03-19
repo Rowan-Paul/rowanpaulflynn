@@ -18,12 +18,12 @@ main {
 }
 
 footer {
+    color: white;
     text-align: center;
-    border-radius: 1em 1em 0em 0em;
-    background-color: #808080;
+    background-color: #000000;
     /* force footer to the bottom */
     flex-shrink: 0;
-    margin: 1em 1em 0em;
+    margin: 0em;
 }
 
 .flex-center {
@@ -66,6 +66,7 @@ footer {
 .topnav {
     /* Add a black background color to the top navigation */
     background-color: #000000;
+    display: sticky;
     overflow: hidden;
 }
 
