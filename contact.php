@@ -1,6 +1,6 @@
 <?php
 $title = "Contact";
-include_once 'standard-pages/header.php';
+include_once 'includes/header.php';
 ?>
 
 <main>
@@ -9,5 +9,5 @@ include_once 'standard-pages/header.php';
 </main>
 
 <?php
-include_once 'standard-pages/footer.php';
+include_once 'includes/footer.php';
 ?>

@@ -1,6 +1,6 @@
 <?php
 $title = "About";
-include_once 'standard-pages/header.php';
+include_once 'includes/header.php';
 
 /* calculate age */
 $birthDate = "8/4/2001";
@@ -30,5 +30,5 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
 </main>
 
 <?php
-include_once 'standard-pages/footer.php';
+include_once 'includes/footer.php';
 ?>
