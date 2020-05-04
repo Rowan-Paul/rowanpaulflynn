@@ -26,6 +26,23 @@ footer {
     margin: 0em;
 }
 
+form {
+    padding: 1em;
+    border: black dotted 1px;
+}
+
+legend, label {
+    margin: 5px 0;
+}
+
+label {
+    display: block;
+}
+
+input {
+    display: block;
+}
+
 .flex-center {
     display: flex;
     flex-direction: column;
