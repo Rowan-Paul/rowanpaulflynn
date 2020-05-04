@@ -3,7 +3,7 @@ $title = "About";
 include_once 'includes/header.php';
 
 /* calculate age */
-$birthDate = "8/4/2001";
+$birthDate = "4/8/2001";
 //explode the date to get month, day and year
 $birthDate = explode("/", $birthDate);
 //get age from date or birthdate
