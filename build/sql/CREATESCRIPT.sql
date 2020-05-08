@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2020 at 02:17 PM
+-- Generation Time: May 08, 2020 at 03:52 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.4
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `main-site`
 --
-CREATE DATABASE IF NOT EXISTS `main-site` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `main-site`;
 
 -- --------------------------------------------------------
 
@@ -29,7 +27,6 @@ USE `main-site`;
 -- Table structure for table `contact`
 --
 
-DROP TABLE IF EXISTS `contact`;
 CREATE TABLE `contact` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
