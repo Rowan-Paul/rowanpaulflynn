@@ -1,6 +1,22 @@
 <?php
 $title = "Contact";
 include_once 'includes/header.php';
+require_once 'includes/database-connect.php';
+
+// has submit been pressed?
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    // insert into database
+    $sql = "INSERT INTO contact (name,email,message)
+            VALUES (:name, :email, :message)";
+    $query = $conn->prepare($sql);
+    $query->execute( array('name' => $name, 'email' => $email, 'message' => $message));
+
+    header('Location: index.php');
+}
 ?>
 
 <main>
@@ -17,7 +33,7 @@ include_once 'includes/header.php';
         <label for="message">Message</label>
         <textarea name="message" id="message" rows="4" cols="30" placeholder="Enter your message here" required></textarea>
 
-        <input type="submit" name="versturen" id="versturen" value="Versturen">
+        <input type="submit" name="submit" id="submit" value="Submit">
     </form>
 </main>
 
