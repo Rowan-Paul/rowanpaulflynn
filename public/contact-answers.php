@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    session_destroy();
+    header('Location: login.php');
+}
+
 $title = "Contact answers";
 include_once 'includes/header.php';
 require_once 'includes/database-connect.php';
@@ -17,7 +23,7 @@ $results = $stmt->fetchAll();
         <?php
             foreach($results as $contact) { ?>
                 <article class="message">
-                    <h2>Bericht #<?=$contact['id']?></h2>
+                    <h2>Message #<?=$contact['id']?></h2>
             
                     <?php
                         $messageDate = nl2br(htmlentities($contact['date']));
@@ -26,10 +32,10 @@ $results = $stmt->fetchAll();
                         $message = nl2br(htmlentities($contact['message']));
                     ?>
             
-                    <p>Datum: <?= $messageDate ?? 'Datum niet gevonden' ?></p>
-                    <p>Naam: <?= $messageName ?? 'Naam niet gevonden'?><br>
+                    <p>Date: <?= $messageDate ?? 'Datum niet gevonden' ?></p>
+                    <p>Name: <?= $messageName ?? 'Naam niet gevonden'?><br>
                         E-mail: <?= $messageEmail ?? 'Email niet gevonden'?> <br>
-                        Bericht: <?= $message ?? 'Bericht niet gevonden' ?></p>
+                        Message: <?= $message ?? 'Bericht niet gevonden' ?></p>
                 </article>
         <?php } ?>
     </div>

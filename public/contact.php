@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
     <h1>Contact</h1>
     <p>If you want to contact me, you can do that here.</p>
 
-    <form method="post" action="">
+    <form method="post">
         <label for="name">Name</label>
         <input type="text" name="name" id="name" required>
 
@@ -35,6 +35,8 @@ if (isset($_POST['submit'])) {
 
         <input type="submit" name="submit" id="submit" value="Submit">
     </form>
+
+    <p><a href="contact-answers.php">View the messages on this page</a></p>
 </main>
 
 <?php
