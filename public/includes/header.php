@@ -19,9 +19,6 @@
             <a href="contact.php" <?php if ($title == 'Contact') {
                                         echo "class ='active'";
                                     } ?>>Contact</a>
-            <a href="blog.php" <?php if ($title == 'Blog') {
-                                    echo "class ='active'";
-                                } ?>>Blog</a>
             <a href="about.php" <?php if ($title == 'About') {
                                     echo "class ='active'";
                                 } ?>>About</a>
