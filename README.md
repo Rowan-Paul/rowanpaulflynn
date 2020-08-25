@@ -1,4 +1,4 @@
-# Portfolio site
+# rowanpaulflynn.com
 On this site you can find everything and anything about myself and my projects. The site is build with HTML, CSS, Javascript, PHP and connected to a database running MySQL.
 
 ## Contributing
