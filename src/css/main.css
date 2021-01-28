@@ -74,9 +74,20 @@ a::selection {
     margin-left: 0rem;
   }
 
+  .introductionText {
+    font-size: 1rem;
+  }
+
   #bio,
   #contact,
   #projects {
     margin: 5rem 1.5rem;
+  }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 480px) {
+  .mobileBreak {
+    display: none;
   }
 }

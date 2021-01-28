@@ -6,8 +6,8 @@ function ProjectsUI() {
       </h2>
       <p>
         Here are a few web projects I''m really proud of. The code for all these
-        projects is available on GitHub, so you can look at the code if you
-        want.
+        projects are available on my{" "}
+        <a href="https://github.com/Rowan-Paul/">GitHub page</a>.
       </p>
     </div>
   );
