@@ -13,7 +13,7 @@ function BioUI() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            HAN University of Apped Sciences
+            HAN University of Applied Sciences
           </a>
         </span>{" "}
         doing Information and Communication Technology.
