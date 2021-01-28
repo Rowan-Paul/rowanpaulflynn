@@ -9,9 +9,12 @@ body {
 
 .emphasis {
   padding: 0.2rem;
-  background-color: #998888;
+  color: white;
+  background-color: #d1462f;
 }
 
 ::selection {
+  padding: 0.2rem;
+  color: #573d1c;
   background-color: #94ecbe;
 }
