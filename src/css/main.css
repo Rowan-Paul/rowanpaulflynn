@@ -24,7 +24,7 @@ body {
 }
 
 /* Containers */
-.introduction {
+#introduction {
   display: grid;
   width: 100%;
   height: 100vh;
@@ -33,11 +33,14 @@ body {
 .introductionText {
   margin: auto;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
-.bio {
+#bio,
+#contact,
+#projects {
   margin: 15rem;
+  padding-top: 1rem;
 }
 
 /* HAN link */
@@ -46,13 +49,8 @@ body {
   text-decoration-color: #e50056;
 }
 
-.han a::selection {
-  color: white;
-  background-color: #e50056;
-}
-
+.han a::selection,
 .han a:hover {
-  padding: 0.2rem;
   color: white;
   background-color: #e50056;
 }
@@ -63,7 +61,8 @@ a {
   text-decoration-color: #d1462f;
 }
 
-a:hover {
+a:hover,
+a::selection {
   color: white;
   padding: 0.2rem;
   background-color: #d1462f;
@@ -75,7 +74,9 @@ a:hover {
     margin-left: 0rem;
   }
 
-  .bio {
-    margin: 5rem 1rem;
+  #bio,
+  #contact,
+  #projects {
+    margin: 5rem 1.5rem;
   }
 }
