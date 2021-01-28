@@ -68,6 +68,20 @@ a::selection {
   background-color: #d1462f;
 }
 
+/* Dark mode */
+.dark {
+  color: white;
+  background-color: #181a1b;
+}
+
+.darkModeToggle {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.75rem;
+  position: absolute;
+  cursor: pointer;
+}
+
 /* MOBILE */
 @media (min-width: 320px) and (max-width: 480px) {
   .header {

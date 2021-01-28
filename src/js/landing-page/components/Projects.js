@@ -16,6 +16,8 @@ function ProjectsUI() {
         </a>
         .
       </p>
+
+      {/* TODO: add cards with projects */}
     </div>
   );
 }

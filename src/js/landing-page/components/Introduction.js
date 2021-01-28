@@ -6,7 +6,7 @@ function IntroductionUI() {
       <div className="introductionText">
         <h1>Hello there</h1>
         <h2>
-          My name is <br class="mobileBreak"></br>
+          My name is <br className="mobileBreak"></br>
           Rowan Paul Flynn
         </h2>
         <h3>
