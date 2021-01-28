@@ -1,7 +1,13 @@
 /* https://coolors.co/c8963e-573d1c-d9ae61-d1462f-94ecbe */
 body {
   font-family: "Open Sans", sans-serif;
-  margin: 2.5rem;
+  margin: 0px;
+}
+
+::selection {
+  padding: 0.2rem;
+  color: #573d1c;
+  background-color: #94ecbe;
 }
 
 .emphasis {
@@ -17,19 +23,21 @@ body {
   background-color: #d9ae61;
 }
 
-::selection {
-  padding: 0.2rem;
-  color: #573d1c;
-  background-color: #94ecbe;
+/* Containers */
+.introduction {
+  display: grid;
+  width: 100%;
+  height: 100vh;
 }
 
-.introduction {
+.introductionText {
+  margin: auto;
   text-align: center;
   font-size: 1.25rem;
 }
 
 .bio {
-  margin: 5rem 15rem;
+  margin: 15rem;
 }
 
 /* HAN link */
