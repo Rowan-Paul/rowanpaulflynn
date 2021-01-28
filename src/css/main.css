@@ -1,0 +1,17 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 2rem;
+}
+
+.introduction {
+  text-align: center;
+}
+
+.emphasis {
+  padding: 0.2rem;
+  background-color: #998888;
+}
+
+::selection {
+  background-color: #94ecbe;
+}
