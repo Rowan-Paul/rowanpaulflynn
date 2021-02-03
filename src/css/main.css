@@ -4,6 +4,10 @@ body {
   margin: 0px;
 }
 
+img {
+  max-width: 50%;
+}
+
 ::selection {
   padding: 0.2rem;
   color: #573d1c;
@@ -84,6 +88,10 @@ a::selection {
 
 /* MOBILE */
 @media (min-width: 320px) and (max-width: 480px) {
+  img {
+    max-width: 100%;
+  }
+
   .header {
     margin-left: 0rem;
   }
