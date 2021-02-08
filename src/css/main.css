@@ -23,8 +23,8 @@ img {
 .header {
   padding: 0.5rem;
   margin-left: 0.5rem;
-  color: white;
-  background-color: #b5852c;
+  text-decoration-line: underline;
+  text-decoration-color: #b5852c;
 }
 
 /* Containers */
