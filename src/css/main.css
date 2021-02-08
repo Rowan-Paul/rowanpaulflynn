@@ -5,6 +5,7 @@ body {
 }
 
 img {
+  margin: 1rem;
   max-width: 50%;
 }
 

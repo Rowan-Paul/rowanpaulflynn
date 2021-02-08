@@ -20,9 +20,9 @@ function BioUI() {
       </p>
 
       <p>
-        In my free time I ke programming cool web appcations, playing strategy
-        &amp; fps games, watching tv shows &amp; movies on my phone and reading
-        the occasional book. I also like tracking stuff, such as my{" "}
+        In my free time I like programming cool web appcations, playing strategy
+        games, watching tv shows &amp; movies on my phone and reading the
+        occasional book. I also like tracking stuff, such as my{" "}
         <a
           href="https://trakt.tv/users/rpf_2001/"
           target="_blank"
@@ -44,7 +44,9 @@ function BioUI() {
       <p>
         Currently my favorite languages are React and NodeJS. But I've had
         experience with HTML &amp; CSS, PHP, JavaScript, Node.JS, Express.js,
-        Mongo(ose) and SQL.
+        Mongo(ose) and SQL. While design is not my strongest point, I have
+        worked with several CSS frameworks such as Tailwind, Materialize and
+        Fomantic-UI.
       </p>
     </div>
   );
