@@ -22,7 +22,7 @@ function BioUI() {
       <p>
         In my free time I ke programming cool web appcations, playing strategy
         &amp; fps games, watching tv shows &amp; movies on my phone and reading
-        the occasional book. I also ke tracking stuff, such as my{" "}
+        the occasional book. I also like tracking stuff, such as my{" "}
         <a
           href="https://trakt.tv/users/rpf_2001/"
           target="_blank"
@@ -42,8 +42,7 @@ function BioUI() {
       </p>
 
       <p>
-        My current favorite languages are{" "}
-        <span className="emphasis">React and NodeJS</span>. But I've had
+        Currently my favorite languages are React and NodeJS. But I've had
         experience with HTML &amp; CSS, PHP, JavaScript, Node.JS, Express.js,
         Mongo(ose) and SQL.
       </p>
