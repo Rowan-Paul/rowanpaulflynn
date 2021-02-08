@@ -4,11 +4,6 @@ body {
   margin: 0px;
 }
 
-img {
-  margin: 1rem;
-  max-width: 50%;
-}
-
 ::selection {
   padding: 0.2rem;
   color: #573d1c;
@@ -46,6 +41,26 @@ img {
 #projects {
   margin: 15rem;
   padding-top: 1rem;
+}
+
+.projectContainer {
+  margin: 5rem;
+  overflow: auto;
+}
+
+.projectThumb {
+  float: left;
+  margin-right: 1rem;
+  max-width: 50%;
+}
+
+.projectThumb img {
+  display: block;
+}
+
+.projectTitle {
+  text-decoration-line: underline;
+  text-decoration-color: #b5852c;
 }
 
 /* HAN link */
@@ -89,10 +104,6 @@ a::selection {
 
 /* MOBILE */
 @media (min-width: 320px) and (max-width: 480px) {
-  img {
-    max-width: 100%;
-  }
-
   .header {
     margin-left: 0rem;
   }
@@ -105,6 +116,26 @@ a::selection {
   #contact,
   #projects {
     margin: 5rem 1.5rem;
+  }
+
+  .projectContainer {
+    margin: 0;
+    overflow: auto;
+  }
+
+  .projectThumb {
+    display: block;
+    margin-bottom: 1rem;
+    max-width: 100%;
+  }
+
+  .projectThumb img {
+    display: block;
+  }
+
+  .projectTitle {
+    text-decoration-line: underline;
+    text-decoration-color: #b5852c;
   }
 }
 
