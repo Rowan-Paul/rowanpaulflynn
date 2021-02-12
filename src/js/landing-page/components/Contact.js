@@ -14,7 +14,8 @@ function ContactUI() {
         <a href="https://www.linkedin.com/in/rowan-paul-flynn-1201a8205/">
           LinkedIn
         </a>{" "}
-        if you're more comfortable with that.
+        and <a href="https://twitter.com/RPF2001">Twitter</a> if you're more
+        comfortable with that.
       </p>
     </div>
   );
