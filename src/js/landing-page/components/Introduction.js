@@ -7,7 +7,7 @@ function IntroductionUI() {
         <h1>Hello there</h1>
         <h2>
           My name is <br className="mobileBreak"></br>
-          <span className="emphasis">Rowan Paul Flynn</span>
+          Rowan Paul Flynn
         </h2>
         <h3>And I like making websites</h3>
         <HashLink smooth to="#bio">
