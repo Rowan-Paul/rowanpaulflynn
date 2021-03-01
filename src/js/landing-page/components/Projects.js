@@ -1,6 +1,6 @@
-import blog from "../../../assets/projects/blog.jpeg";
-import rekenlogboek from "../../../assets/projects/rekenlogboek.jpeg";
-import quizzer from "../../../assets/projects/quizzer.jpeg";
+import blog from '../../../assets/projects/blog.jpeg'
+import rekenlogboek from '../../../assets/projects/rekenlogboek.jpeg'
+import quizzer from '../../../assets/projects/quizzer.jpeg'
 
 function ProjectsUI() {
   return (
@@ -10,7 +10,7 @@ function ProjectsUI() {
       </h2>
       <p>
         Here are a few web projects I'm really proud of. If you are interested
-        in some projects I'm currently working on, check out my{" "}
+        in some projects I'm currently working on, check out my{' '}
         <a
           href="https://github.com/Rowan-Paul/"
           target="_blank"
@@ -29,12 +29,11 @@ function ProjectsUI() {
           className="projectThumb"
         />
         <p>
-          The rekenlogboek app was made together with 4 others. The idea was to
-          digitalize the so called Rekenlogboek for primary school children. The
-          project utilised React, Express, MongoDB, Socket.io, Microsoft
-          Identity Framework and ran (partly) inside Microsoft Teams. The server
-          has unit tests with Jest and the client has end-to-end tests with
-          Puppeteer.
+          The rekenlogboek app was made together with 4 others. The rekenlogboek
+          allows primary school teachers to ask their students how they (feel)
+          they did during tests and explanations. By converting it to a digital
+          application teachers can get a quick overview of the performance of
+          the class.
         </p>
         <p>
           During this project I learned a lot about authentication using the
@@ -61,19 +60,20 @@ function ProjectsUI() {
           className="projectThumb"
         />
         <p>
-          Quizzer was made together with another student during the DWA course.
-          The assisgnement was to create a pub quiz application. It was made out
-          of 4 different apps: three for the client-side and one for the
-          server-side.
+          Quizzer was made together with another student during the DWA course,
+          we had to make a pub quiz in React &amp; Express. The app has consists
+          out of a quizmaster app that chooses the question, a client app that
+          answers the question and a scoreboard app that shows the current
+          question &amp; score.
         </p>
         <p>
-          The project utilised React, Express and WebSockets. During this
-          project I learned a lot about the connection between server and
-          client, such as CORS and when to use WebSockets.
+          The project utilised websockets to establish a real-time connection
+          between the app and the server. This made us think about when to use
+          HTTP and when to use websockets to send information.
         </p>
       </div>
     </div>
-  );
+  )
 }
 
-export const Projects = ProjectsUI;
+export const Projects = ProjectsUI
