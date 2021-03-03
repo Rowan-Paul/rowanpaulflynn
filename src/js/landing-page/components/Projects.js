@@ -61,7 +61,7 @@ function ProjectsUI() {
         />
         <p>
           Quizzer was made together with another student during the DWA course,
-          we had to make a pub quiz in React &amp; Express. The app has consists
+          we had to make a pub quiz in React &amp; Express. The app consists
           out of a quizmaster app that chooses the question, a client app that
           answers the question and a scoreboard app that shows the current
           question &amp; score.
