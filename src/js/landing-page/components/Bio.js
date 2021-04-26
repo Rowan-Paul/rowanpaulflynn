@@ -20,7 +20,7 @@ function BioUI() {
       </p>
 
       <p>
-        In my free time I like programming cool web appcations, playing strategy
+        In my free time I like programming cool web applications, playing strategy
         games, watching tv shows &amp; movies on my phone and reading the
         occasional book. I also like tracking stuff, such as my{" "}
         <a
