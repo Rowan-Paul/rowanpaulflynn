@@ -25,4 +25,4 @@ jobs:
             source ~/.nvm/nvm.sh
             npm i
             npm run build
-            pm2 restart rowanpaulflynn.js
+            pm2 restart rowanpaulflynn
