@@ -21,8 +21,6 @@ jobs:
             cd /var/www/rowanpaulflynn
             git fetch --all
             git reset --hard origin/main
-            export NVM_DIR=~/.nvm
-            source ~/.nvm/nvm.sh
             npm i
             npm run build
             pm2 restart rowanpaulflynn
