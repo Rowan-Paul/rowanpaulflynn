@@ -1,6 +1,10 @@
 /* https://coolors.co/c8963e-573d1c-b5852c-d1462f-94ecbe */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0px;
 }
 
@@ -15,6 +19,27 @@ body {
   margin-left: 0.5rem;
   text-decoration-line: underline;
   text-decoration-color: #b5852c;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 5rem 0;
+  gap: 4rem;
+}
+
+.gridContainer a:hover {
+  background-color: inherit;
+  padding: 0;
+}
+
+.langContainer {
+  margin: 2.5rem 0;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.gridChild {
+  max-height: 5rem;
 }
 
 /* Containers */
@@ -33,7 +58,7 @@ body {
 #bio,
 #contact,
 #projects {
-  margin: 15rem;
+  margin: 5rem 10rem;
   padding-top: 1rem;
 }
 
@@ -57,18 +82,6 @@ body {
   text-decoration-color: #b5852c;
 }
 
-/* HAN link */
-.han a {
-  color: inherit;
-  text-decoration-color: #e50056;
-}
-
-.han a::selection,
-.han a:hover {
-  color: white;
-  background-color: #e50056;
-}
-
 /* LINKS */
 a {
   color: inherit;
@@ -88,6 +101,10 @@ a::selection {
   background-color: #181a1b;
 }
 
+.dark svg {
+  fill: white;
+}
+
 .darkModeToggle {
   width: 2.5rem;
   height: 2.5rem;
@@ -104,6 +121,20 @@ a::selection {
 
   .introductionText {
     font-size: 1rem;
+  }
+
+  .gridContainer {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin: 2rem 0;
+  }
+
+  .gridChild {
+    max-height: 2rem;
+  }
+
+  .langContainer {
+    margin: 2.5rem 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   #bio,
