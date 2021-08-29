@@ -32,7 +32,7 @@ export async function getServerSideProps({ req, res }) {
 export default function Draft(props) {
   const [session] = useSession()
 
-  if (!session) {
+  if (!session || !session.isAdmin) {
     return (
       <div className="m-auto p-5 md:p-20">
         <Head>

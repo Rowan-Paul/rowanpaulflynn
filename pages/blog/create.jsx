@@ -23,7 +23,7 @@ const Draft = () => {
     }
   }
 
-  if (!session) {
+  if (!session || !session.isAdmin) {
     return (
       <div className="m-auto p-5 md:p-20">
         <Head>

@@ -32,7 +32,7 @@ export default function BlogPost(props) {
       </Head>
 
       <h1>Blog posts</h1>
-      {session ? (
+      {session && session.isAdmin ? (
         <Link href="/blog/create">
           <a className="border-top-2">Create a new post</a>
         </Link>
