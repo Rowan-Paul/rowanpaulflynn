@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown'
 
 const Post = ({ post }) => {
   const authorName = post.author ? post.author.name : 'Unknown author'
+
   return (
     <div
       onClick={() => Router.push('/blog/posts/[id]', `/blog/posts/${post.id}`)}
@@ -11,7 +12,7 @@ const Post = ({ post }) => {
     >
       <h2>{post.title}</h2>
       <small>By {authorName}</small>
-      <ReactMarkdown children={post.content} />
+      <ReactMarkdown children={post.content?.split('\n')[0]} />
     </div>
   )
 }
