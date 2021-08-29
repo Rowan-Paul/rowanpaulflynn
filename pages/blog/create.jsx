@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import React, { useState } from 'react'
+import { useSession } from 'next-auth/client'
 import Router from 'next/router'
 
 const Draft = () => {
+  const [session] = useSession()
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
 
@@ -21,8 +23,22 @@ const Draft = () => {
     }
   }
 
+  if (!session) {
+    return (
+      <div className="m-auto p-5 md:p-20">
+        <Head>
+          <title>Blog | Rowan-Paul Flynn</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+
+        <h1>Not authenticated</h1>
+        <div>You need to be authenticated to view this page.</div>
+      </div>
+    )
+  }
+
   return (
-    <div className="m-auto p-20 flex align-center justify-center">
+    <div className="m-auto p-5 md:p-20">
       <Head>
         <title>Create Post | Blog | Rowan-Paul Flynn</title>
         <link rel="icon" href="/favicon.ico" />
@@ -46,18 +62,19 @@ const Draft = () => {
           value={content}
           className="block my-3 p-1 text-black border-2 rounded border-black"
         />
-        <input
+        <button
           disabled={!content || !title}
           type="submit"
-          value="Create"
-          className="cursor-pointer disabled:cursor-default text-black inline-block p-3 my-3 mx-1 border-2 rounded border-black"
-        />
+          className="disabled:text-gray-500 bg-white cursor-pointer disabled:cursor-default text-black inline-block p-2 my-3 mx-1 border-2 rounded border-black"
+        >
+          Submit
+        </button>
         <span
           href="#"
-          onClick={() => Router.push('/')}
-          className="cursor-pointer"
+          onClick={() => Router.push('/drafts')}
+          className="cursor-pointer ml-5"
         >
-          or Cancel
+          Cancel
         </span>
       </form>
     </div>

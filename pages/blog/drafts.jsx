@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import React from 'react'
 import { useSession, getSession } from 'next-auth/client'
 import prisma from '../../lib/prisma'
@@ -33,20 +34,20 @@ export default function Draft(props) {
 
   if (!session) {
     return (
-      <div className="m-auto p-20">
+      <div className="m-auto p-5 md:p-20">
         <Head>
           <title>Blog | Rowan-Paul Flynn</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <h1>My Drafts</h1>
+        <h1>Not authenticated</h1>
         <div>You need to be authenticated to view this page.</div>
       </div>
     )
   }
 
   return (
-    <div className="m-auto p-20">
+    <div className="m-auto p-5 md:p-20">
       <Head>
         <title>Blog | Rowan-Paul Flynn</title>
         <link rel="icon" href="/favicon.ico" />
@@ -54,11 +55,20 @@ export default function Draft(props) {
 
       <h1>My Drafts</h1>
       <main>
-        {props.drafts.map((post) => (
-          <div key={post.id}>
-            <Post post={post} />
-          </div>
-        ))}
+        {props.drafts[0] ? (
+          props.drafts.map((post) => (
+            <div key={post.id}>
+              <Post post={post} />
+            </div>
+          ))
+        ) : (
+          <p>
+            No drafts found,{' '}
+            <Link href="/blog/create">
+              <a>create a new draft</a>
+            </Link>
+          </p>
+        )}
       </main>
     </div>
   )

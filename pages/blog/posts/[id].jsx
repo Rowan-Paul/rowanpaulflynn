@@ -61,7 +61,7 @@ export default function BlogPost(props) {
   }
   if (loading) {
     return (
-      <div className="m-auto md:p-20">
+      <div className="m-auto p-5 md:p-20">
         <Head>
           <title>Blog | Rowan-Paul Flynn</title>
           <link rel="icon" href="/favicon.ico" />
@@ -79,7 +79,7 @@ export default function BlogPost(props) {
   }
 
   return (
-    <div className="m-auto md:p-20">
+    <div className="m-auto p-5 md:p-20">
       <Head>
         <title>{title ? `${title} | ` : ''}Blog | Rowan-Paul Flynn</title>
         <link rel="icon" href="/favicon.ico" />
