@@ -1,11 +1,9 @@
-import { useEffect, Fragment } from 'react'
+import { useEffect } from 'react'
+import 'tailwindcss/tailwind.css'
+import DarkModeToggle from '../components/darkModeToggle'
+import '../styles/global.css'
 
-import { Introduction } from './components/Introduction'
-import { Bio } from './components/Bio'
-import { Projects } from './components/Projects'
-import { DarkModeToggle } from './components/DarkModeToggle'
-
-function App() {
+function MyApp({ Component, pageProps }) {
   useEffect(() => {
     if (
       window.matchMedia &&
@@ -23,13 +21,11 @@ function App() {
   }, [])
 
   return (
-    <Fragment>
+    <span>
       <DarkModeToggle />
-      <Introduction />
-      <Bio />
-      <Projects />
-    </Fragment>
+      <Component {...pageProps} />
+    </span>
   )
 }
 
-export default App
+export default MyApp
