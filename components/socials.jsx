@@ -1,10 +1,7 @@
 export default function Socials() {
   return (
     <div className="grid grid-cols-4 my-8 md:my-20 gap-16">
-      <a
-        href="mailto:contact@rowanpaulflynn.com"
-        className="hover:p-0 hover:bg-current"
-      >
+      <a href="mailto:contact@rowanpaulflynn.com" className="hover:p-0">
         <svg
           role="img"
           viewBox="0 0 24 24"
@@ -20,7 +17,7 @@ export default function Socials() {
         href="https://github.com/Rowan-Paul/"
         target="_blank"
         rel="noreferrer"
-        className="hover:p-0 hover:bg-current"
+        className="hover:p-0"
       >
         <svg
           role="img"
@@ -37,7 +34,7 @@ export default function Socials() {
         href="https://twitter.com/RPF2001"
         target="_blank"
         rel="noreferrer"
-        className="hover:p-0 hover:bg-current"
+        className="hover:p-0"
       >
         <svg
           role="img"
@@ -54,7 +51,7 @@ export default function Socials() {
         href="https://www.linkedin.com/in/rowan-paul-flynn-1201a8205/"
         target="_blank"
         rel="noreferrer"
-        className="hover:p-0 hover:bg-current"
+        className="hover:p-0"
       >
         <svg
           role="img"

@@ -1,3 +1,4 @@
+import { Provider } from 'next-auth/client'
 import { useEffect } from 'react'
 import 'tailwindcss/tailwind.css'
 import DarkModeToggle from '../components/darkModeToggle'
@@ -21,10 +22,10 @@ function MyApp({ Component, pageProps }) {
   }, [])
 
   return (
-    <span>
+    <Provider session={pageProps.session}>
       <DarkModeToggle />
       <Component {...pageProps} />
-    </span>
+    </Provider>
   )
 }
 
