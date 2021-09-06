@@ -14,6 +14,9 @@ export async function getServerSideProps({ params }) {
         select: { name: true, email: true },
       },
     },
+    order: {
+      datetime: "desc"
+    }
   })
 
   return {
