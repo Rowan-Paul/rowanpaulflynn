@@ -15,8 +15,8 @@ export async function getServerSideProps({ params }) {
       },
     },
     orderBy: {
-      datetime: "desc"
-    }
+      id: 'desc',
+    },
   })
 
   return {
