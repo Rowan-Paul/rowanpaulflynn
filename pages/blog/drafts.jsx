@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
 import { useSession, getSession } from 'next-auth/client'
+import Router from 'next/router'
 import prisma from '../../lib/prisma'
 import Post from '../../components/post'
 
@@ -27,6 +28,13 @@ export async function getServerSideProps({ req, res }) {
   return {
     props: { drafts },
   }
+}
+
+async function publishPost(id) {
+  await fetch(`/api/publish/${id}`, {
+    method: 'PUT',
+  })
+  await Router.push(`/blog/posts/${id}`)
 }
 
 export default function Draft(props) {
@@ -62,6 +70,9 @@ export default function Draft(props) {
           props.drafts.map((post) => (
             <div key={post.id}>
               <Post post={post} />
+              <span onClick={() => publishPost(post.id)} className="cursor-pointer p-2 bg-gray-500 mr-2">
+                Publish
+              </span>
             </div>
           ))
         ) : (
