@@ -14,10 +14,7 @@ export default function NavBar() {
       <Link href="/blog">
         <a className="hover:bg-gray-500  hover:p-0 no-underline">Blog</a>
       </Link>
-      <span
-        onClick={() => (session ? signOut() : signIn())}
-        className={`${session?.isAdmin ? '' : 'ml-auto'} cursor-pointer`}
-      >
+      <span onClick={() => (session ? signOut() : signIn())} className="ml-auto cursor-pointer">
         {session ? 'Sign out' : 'Sign In'}
       </span>
     </nav>
