@@ -76,12 +76,7 @@ export default function Draft(props) {
             </div>
           ))
         ) : (
-          <p>
-            No drafts found,{' '}
-            <Link href="/blog/create">
-              <a>create a new draft</a>
-            </Link>
-          </p>
+          <p>No drafts found</p>
         )}
       </main>
     </div>
