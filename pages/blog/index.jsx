@@ -36,8 +36,8 @@ export default function BlogPost(props) {
 
       <h1>Blog posts</h1>
       {session && session.isAdmin ? (
-        <Link href="/blog/create">
-          <a className="border-top-2">Create a new post</a>
+        <Link href="/blog/drafts">
+          <a className="border-top-2">Show my drafts</a>
         </Link>
       ) : (
         ''

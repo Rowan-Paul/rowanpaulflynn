@@ -39,7 +39,7 @@ async function deletePost(id) {
   await fetch(`/api/post/${id}`, {
     method: 'DELETE',
   })
-  Router.push('/')
+  Router.push('/blog')
 }
 
 export default function BlogPost(props) {
@@ -90,18 +90,12 @@ export default function BlogPost(props) {
       <ReactMarkdown children={props.content} />
 
       {!props.published && userHasValidSession && postBelongsToUser && (
-        <span
-          onClick={() => publishPost(props.id)}
-          className="cursor-pointer p-2 bg-gray-500 mr-2"
-        >
+        <span onClick={() => publishPost(props.id)} className="cursor-pointer p-2 bg-gray-500 mr-2">
           Publish
         </span>
       )}
       {userHasValidSession && postBelongsToUser && (
-        <span
-          onClick={() => deletePost(props.id)}
-          className="cursor-pointer p-2 bg-gray-500"
-        >
+        <span onClick={() => deletePost(props.id)} className="cursor-pointer p-2 bg-gray-500">
           Delete
         </span>
       )}
