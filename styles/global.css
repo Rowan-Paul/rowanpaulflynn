@@ -59,8 +59,13 @@ a::selection {
   text-decoration-color: #b5852c;
 }
 
-.dark svg {
+.dark a svg {
   fill: white;
+  background-color: #181a1b;
+}
+
+a svg {
+  background-color: white;
 }
 
 .dark svg {
