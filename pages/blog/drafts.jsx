@@ -54,6 +54,9 @@ export default function Draft(props) {
       </Head>
 
       <h1>My Drafts</h1>
+      <Link href="/blog/create">
+        <a className="border-top-2">Create a new post</a>
+      </Link>
       <main>
         {props.drafts[0] ? (
           props.drafts.map((post) => (
