@@ -22,5 +22,6 @@ jobs:
             git fetch --all
             git reset --hard origin/main
             docker stop rowanpaulflynn
+            docker rm rowanpaulflynn
             docker build . -t rowanpaulflynn
             docker run -e VIRTUAL_HOST=rowanpaulflynn.com -e LETSENCRYPT_HOST=rowanpaulflynn.com -d --name rowanpaulflynn rowanpaulflynn
