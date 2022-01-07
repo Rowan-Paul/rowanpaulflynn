@@ -9,6 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Rowan Paul Flynn</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Personal site for Rowan Paul Flynn, web developer in the Netherlands." />
       </Head>
 
       <Component {...pageProps} />
