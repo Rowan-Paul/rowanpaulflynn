@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           property="og:description"
           content="Personal site for Rowan Paul Flynn, web developer in the Netherlands."
         />
-        <meta property="og:image" content="icon.png" />
+        <meta property="og:image" content="/icon.png" />
         <meta property="og:url" content="https://rowanpaulflynn.com" />
       </Head>
 
