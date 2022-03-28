@@ -14,7 +14,10 @@ const Home: NextPage = () => {
         </div>
       </Section>
       <Link href="#socials">
-        <a className="absolute bottom-0 left-0 right-0 ml-auto mr-auto w-12 text-xs md:text-base text-white cursor-pointer hover:animate-bounce mb-5">
+        <a
+          className="absolute bottom-0 left-0 right-0 ml-auto mr-auto w-12 text-xs md:text-base text-white cursor-pointer hover:animate-bounce mb-5"
+          aria-label="Go to socials"
+        >
           <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="#FFFFFF">
             <path d="M24 24H0V0h24v24z" fill="none" opacity=".87" />
             <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" />
