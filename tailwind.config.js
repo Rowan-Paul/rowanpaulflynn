@@ -5,6 +5,9 @@ module.exports = {
       colors: {
         'dark-grey-500': '#121212',
         'dark-grey-400': '1d1d1d'
+      },
+      maxWidth: {
+        '3/4': '70%'
       }
     }
   },
