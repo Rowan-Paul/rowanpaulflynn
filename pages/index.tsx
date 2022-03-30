@@ -23,10 +23,15 @@ const Home: NextPage = () => {
           </span>
         </p>
         <div className="flex flex-row gap-4 my-2 md:my-5">
-          <a href="https://github.com/rowan-paul" rel="noreferrer" target="_blank">
+          <a href="https://github.com/rowan-paul" rel="noreferrer" target="_blank" aria-label="Github profile">
             <GithubIcon />
           </a>
-          <a href="https://www.linkedin.com/in/rowan-paul-flynn-1201a8205" rel="noreferrer" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/rowan-paul-flynn-1201a8205"
+            rel="noreferrer"
+            target="_blank"
+            aria-label="LinkedIn profile"
+          >
             <LinkedInIcon />
           </a>
         </div>
