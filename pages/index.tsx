@@ -26,7 +26,7 @@ const Home: NextPage = () => {
           <a href="https://github.com/rowan-paul" rel="noreferrer" target="_blank">
             <GithubIcon />
           </a>
-          <a href="www.linkedin.com/in/rowan-paul-flynn-1201a8205" rel="noreferrer" target="_blank">
+          <a href="https://www.linkedin.com/in/rowan-paul-flynn-1201a8205" rel="noreferrer" target="_blank">
             <LinkedInIcon />
           </a>
         </div>
