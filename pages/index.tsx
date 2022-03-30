@@ -2,38 +2,35 @@ import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 min-h-screen bg-primary">
-      <div className="flex justify-center items-center flex-col text-center">
-        <div className="bg-clip-text text-transparent h-16 bg-gradient-to-r from-orange-400 to-purple-600">
-          <h1 className="text-3xl md:text-5xl font-extrabold ">Rowan Paul Flynn</h1>
+    <div className="min-h-screen bg-primary text-text">
+      <div className="container m-auto ">
+        <div className="flex justify-center items-center flex-col text-center py-20">
+          <h1 className="text-4xl md:text-6xl font-extrabold ">Rowan Paul Flynn</h1>
+          <p className="text-2xl md:text-3xl my-2 md:my-5 px-5 md:px-10 xl:px-32">
+            Hi, my name is Rowan Paul Flynn. I&apos;m a web developer with a love for all things Javascript. I have
+            experience with frameworks such as React, Next &amp; Strapi.
+          </p>
         </div>
-        <p className="text-lg md:text-3xl my-2 md:my-5 px-5 md:px-10 xl:px-32">
-          Hi, my name is Rowan Paul Flynn. I&apos;m a web developer with a love for all things Javascript. I have
-          experience with frameworks such as React, Next &amp; Strapi.
-        </p>
-      </div>
-      <div className="flex justify-center items-center flex-col text-center">
-        <h2 className="text-2xl">Contact me</h2>
-        <p className="px-5">
-          Need to get into contact with me? You can email me at{' '}
-          <span className="text-xl underline">
+        <div className="flex justify-center items-center flex-col text-center">
+          <h2 className="text-3xl md:text-5xl">Contact me</h2>
+          <div className="text-xl underline">
             <a href="mailto:contact@rowanpaulflynn.com" rel="noreferrer" target="_blank">
               contact@rowanpaulflynn.com
             </a>
-          </span>
-        </p>
-        <div className="flex flex-row gap-4 my-2 md:my-5">
-          <a href="https://github.com/rowan-paul" rel="noreferrer" target="_blank" aria-label="Github profile">
-            <GithubIcon />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/rowan-paul-flynn-1201a8205"
-            rel="noreferrer"
-            target="_blank"
-            aria-label="LinkedIn profile"
-          >
-            <LinkedInIcon />
-          </a>
+          </div>
+          <div className="flex flex-row gap-4 my-2 md:my-5">
+            <a href="https://github.com/rowan-paul" rel="noreferrer" target="_blank" aria-label="Github profile">
+              <GithubIcon />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/rowan-paul-flynn-1201a8205"
+              rel="noreferrer"
+              target="_blank"
+              aria-label="LinkedIn profile"
+            >
+              <LinkedInIcon />
+            </a>
+          </div>
         </div>
       </div>
     </div>
