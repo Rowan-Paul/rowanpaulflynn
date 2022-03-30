@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 min-h-screen">
+    <div className="grid grid-cols-1 md:grid-cols-2 min-h-screen bg-primary">
       <div className="flex justify-center items-center flex-col text-center">
         <div className="bg-clip-text text-transparent h-16 bg-gradient-to-r from-orange-400 to-purple-600">
           <h1 className="text-3xl md:text-5xl font-extrabold ">Rowan Paul Flynn</h1>

@@ -4,7 +4,8 @@ module.exports = {
     extend: {
       colors: {
         'dark-grey-500': '#121212',
-        'dark-grey-400': '1d1d1d'
+        'dark-grey-400': '1d1d1d',
+        primary: '#f4fcf4'
       },
       maxWidth: {
         '3/4': '70%'
