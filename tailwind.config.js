@@ -13,7 +13,7 @@ module.exports = {
         '3/4': '70%'
       },
       fontFamily: {
-        primary: ['DM Serif Display', 'serif']
+        primary: ['DM Serif Display', 'sans-serif']
       }
     }
   },
