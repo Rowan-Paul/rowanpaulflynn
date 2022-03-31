@@ -2,9 +2,9 @@ import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
   return (
-    <div className="min-h-screen bg-primary font-primary text-text">
+    <div className="min-h-screen bg-primary dark:bg-dark-grey-500 font-primary text-text dark:text-primary">
       <div className="container m-auto max-w-3xl">
-        <h1 className="text-4xl md:text-6xl font-extrabold py-10">Rowan Paul Flynn</h1>
+        <h1 className="text-4xl md:text-6xl font-extrabold py-10 underline decoration-light-blue">Rowan Paul Flynn</h1>
         <p className="text-2xl md:text-3xl">
           Hi, my name is Rowan Paul Flynn. I&apos;m a web developer with a love for all things Javascript. I have
           experience with frameworks such as React, Next &amp; Strapi.

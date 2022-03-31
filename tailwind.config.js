@@ -6,7 +6,8 @@ module.exports = {
         'dark-grey-500': '#121212',
         'dark-grey-400': '1d1d1d',
         primary: '#F1FAFF',
-        text: '#222325'
+        text: '#222325',
+        'light-blue': '#a5dfff'
       },
       maxWidth: {
         '3/4': '70%'
