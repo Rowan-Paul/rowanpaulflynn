@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
   return (
-    <div className="min-h-screen bg-primary dark:bg-dark-grey-500 font-primary text-text dark:text-primary">
+    <div className="min-h-screen bg-primary dark:bg-dark-grey-500 font-primary text-text dark:text-primary p-5">
       <div className="container m-auto max-w-3xl">
         <h1 className="text-4xl md:text-6xl font-extrabold py-10 underline decoration-light-blue">Rowan Paul Flynn</h1>
         <p className="text-2xl md:text-3xl">
