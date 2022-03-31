@@ -1,6 +1,4 @@
-import type { NextPage } from 'next';
-
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <div className="min-h-screen bg-primary dark:bg-dark-grey-500 font-primary text-text dark:text-primary p-5">
       <div className="container m-auto max-w-3xl">
@@ -10,18 +8,30 @@ const Home: NextPage = () => {
           experience with frameworks such as React, Next &amp; Strapi.
         </p>
       </div>
-      <div className="container m-auto max-w-3xl mt-10 flex flex-row justify-center gap-4">
-        <a href="https://github.com/Rowan-Paul" target="_blank" rel="noreferrer" aria-label="Github">
-          <GithubIcon />
-        </a>
+      <div className="container m-auto max-w-3xl mt-20 text-center">
+        <h2 className="text-2xl md:text-4xl mb-2">Contact me</h2>
         <a
-          href="https://www.linkedin.com/in/rowan-paul-flynn-1201a8205/"
+          href="mailto:contact@rowanpaulflynn.com"
           target="_blank"
           rel="noreferrer"
-          aria-label="LinkedIn"
+          aria-label="Email"
+          className="underline decoration-light-blue text-2xl"
         >
-          <LinkedInIcon />
+          contact@rowanpaulflynn.com
         </a>
+        <div className="flex flex-row justify-center gap-4 mt-16">
+          <a href="https://github.com/Rowan-Paul" target="_blank" rel="noreferrer" aria-label="Github">
+            <GithubIcon />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/rowan-paul-flynn-1201a8205/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+          >
+            <LinkedInIcon />
+          </a>
+        </div>
       </div>
     </div>
   );
