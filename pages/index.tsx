@@ -11,8 +11,17 @@ const Home: NextPage = () => {
         </p>
       </div>
       <div className="container m-auto max-w-3xl mt-10 flex flex-row justify-center gap-4">
-        <GithubIcon />
-        <LinkedInIcon />
+        <a href="https://github.com/Rowan-Paul" target="_blank" rel="noreferrer" aria-label="Github">
+          <GithubIcon />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/rowan-paul-flynn-1201a8205/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="LinkedIn"
+        >
+          <LinkedInIcon />
+        </a>
       </div>
     </div>
   );
