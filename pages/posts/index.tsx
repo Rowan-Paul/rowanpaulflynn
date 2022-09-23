@@ -1,10 +1,10 @@
-import Card from '../../components/Card';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import { GetStaticProps } from 'next';
 import { useState } from 'react';
 import Head from 'next/head';
+import matter from 'gray-matter';
+import fs from 'fs';
+import path from 'path';
+import { GetStaticProps } from 'next';
+import Card from '../../components/Card';
 
 const getPosts = () => {
   const files = fs.readdirSync(path.join('posts'));

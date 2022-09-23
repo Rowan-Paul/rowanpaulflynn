@@ -1,0 +1,176 @@
+---
+title: 'How I created this blog'
+date: '23 September 2022'
+description: 'This blog is powered by NextJS as frontend framework and MDX as the way I write these posts.'
+---
+
+This blog is powered by NextJS as frontend framework and MDX as the way I write these posts. NextJS is a framework on top of the React framework that always the creation of apps with a mix of static and server generated content. MDX is a way to embed JSX inside Markdown, which is pretty cool.
+
+## Create the app
+
+First, create a new NextJS app with create-next-app using the following command:
+
+```
+yarn create next-app --typescript
+```
+
+Then install the following packages:
+
+```
+yarn add gray-matter next-mdx-remote
+```
+
+These packages allow you to use MDX inside your NextJS app. Now create a posts or blog folder with a MDX file like this:
+
+```
+---
+title: 'Hello world'
+date: '23 September 2022'
+description: 'My first post'
+---
+
+Lorem ipsum
+```
+
+The title, date and description are so called meta tags and won't be shown in the blogpost itself. Now we need to create pages for the blog overview and detail pages. We'll use Next's GetStaticProps to fetch all the posts from the folder and display their information:
+
+```
+import matter from 'gray-matter';
+import fs from 'fs';
+import path from 'path';
+import { GetStaticProps } from 'next';
+import Link from 'next/link';
+
+const getPosts = () => {
+  const files = fs.readdirSync(path.join('posts'));
+
+  const allPostsData = files.map((fileName) => {
+    const slug = fileName.replace('.mdx', '');
+    const fileContents = fs.readFileSync(path.join(`posts/${slug}.mdx`), 'utf8');
+    const { data } = matter(fileContents);
+
+    return {
+      slug,
+      data
+    };
+  });
+
+  return allPostsData;
+};
+
+const PostsOverview = ({ posts }: any) => {
+  return (
+    <div>
+      <h1>Latest Posts</h1>
+      {posts.length > 0 ? (
+        posts.map((post: any) => (
+          <div key={post.slug}>
+            <h2>{post.data.title}</h2>
+            <div>{post.data.date}</div>
+            <div>{post.data.description}</div>
+
+            <Link href="/[slug]" as={`/${post.slug}`}>
+              <a>Read the entire post</a>
+            </Link>
+          </div>
+        ))
+      ) : (
+        <div>No posts yet...</div>
+      )}
+    </div>
+  );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = getPosts();
+
+  return {
+    props: {
+      posts
+    }
+  };
+};
+
+export default PostsOverview;
+```
+
+This should display all posts in the post folder that you've created. Now create the detail page like this, also using Next's GetStaticProps:
+
+```
+import { MDXRemote } from 'next-mdx-remote';
+import { serialize } from 'next-mdx-remote/serialize';
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import Link from 'next/link';
+import { GetStaticProps, GetStaticPaths } from 'next';
+
+interface Post {
+  title: string;
+  date: string;
+}
+
+const getPosts = () => {
+  const files = fs.readdirSync(path.join('posts'));
+  const allPostsData = files.map((fileName) => {
+    const slug = fileName.replace('.mdx', '');
+    const fileContents = fs.readFileSync(path.join(`posts/${slug}.mdx`), 'utf8');
+    const { data } = matter(fileContents);
+    return {
+      slug,
+      data
+    };
+  });
+
+  return allPostsData;
+};
+
+const getPost = (slug: string) => {
+  const fileContents = fs.readFileSync(path.join(`posts/${slug}.mdx`), 'utf8');
+  const { data, content } = matter(fileContents);
+  return {
+    data,
+    content
+  };
+};
+
+const Post = ({ data, content }: any) => {
+  return (
+    <div>
+      <h1>{data.title}</h1>
+      <div>{data.date}</div>
+      <div>
+        <MDXRemote {...content} />
+      </div>
+      <Link href="/">
+        <a>Back to overview</a>
+      </Link>
+    </div>
+  );
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const posts = await getPosts();
+  const paths = posts.map((post) => ({ params: { slug: post.slug } }));
+  return {
+    paths,
+    fallback: false
+  };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const post = await getPost(params?.slug as string);
+  const mdxSource = await serialize(post.content);
+
+  return {
+    props: {
+      data: post.data,
+      content: mdxSource
+    }
+  };
+};
+
+export default Post;
+```
+
+That it! You should now have a working blog😁. You could use TailwindCSS to style the app and Vercel to host the site.
