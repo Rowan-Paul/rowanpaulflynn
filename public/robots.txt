@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://rowanpaulflynn.com
+
+# Sitemaps
+Sitemap: https://rowanpaulflynn.com/sitemap.xml
