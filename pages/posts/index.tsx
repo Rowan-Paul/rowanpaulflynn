@@ -4,6 +4,8 @@ import path from 'path';
 import matter from 'gray-matter';
 import { GetStaticProps } from 'next';
 import { useState } from 'react';
+import Head from 'next/head';
+import HomeIcon from '../../components/HomeIcon';
 
 const getPosts = () => {
   const files = fs.readdirSync(path.join('posts'));
@@ -28,40 +30,46 @@ const PostsOverview = ({ posts }: any) => {
   const totalPages = Math.ceil(posts.length / pageSize);
 
   return (
-    <div className="min-h-screen bg-primary dark:bg-dark-grey-500 font-primary text-text dark:text-primary p-5">
-      <div className="container m-auto max-w-3xl">
-        <h1 className="mt-24 mb-12 font-bold text-3xl">Latest Posts</h1>
-        {posts.length > 0 ? (
-          posts
-            .slice((currentPage - 1) * pageSize, currentPage * pageSize)
-            .map((post: any) => (
-              <Card
-                key={post.slug}
-                title={post.data.title}
-                date={post.data.date}
-                description={post.data.description}
-                slug={post.slug}
-              />
-            ))
-        ) : (
-          <div>No posts yet...</div>
-        )}
-        {totalPages > 1 && (
-          <div className="cursor-pointer mt-8 mb-2">
-            {currentPage > 1 && (
-              <div onClick={() => setCurrentPage(currentPage - 1)} className="inline-block mr-4">
-                Go to previous page
-              </div>
-            )}
-            {currentPage < totalPages && (
-              <div onClick={() => setCurrentPage(currentPage + 1)} className="inline-block">
-                Go to next page
-              </div>
-            )}
-          </div>
-        )}
+    <>
+      <Head>
+        <title>Posts | Rowan Paul Flynn</title>
+      </Head>
+
+      <div className="min-h-screen bg-primary dark:bg-dark-grey-500 font-primary text-text dark:text-primary p-5">
+        <div className="container m-auto max-w-3xl">
+          <h1 className="mt-24 mb-12 font-bold text-3xl">Latest Posts</h1>
+          {posts.length > 0 ? (
+            posts
+              .slice((currentPage - 1) * pageSize, currentPage * pageSize)
+              .map((post: any) => (
+                <Card
+                  key={post.slug}
+                  title={post.data.title}
+                  date={post.data.date}
+                  description={post.data.description}
+                  slug={post.slug}
+                />
+              ))
+          ) : (
+            <div>No posts yet...</div>
+          )}
+          {totalPages > 1 && (
+            <div className="cursor-pointer mt-8 mb-2">
+              {currentPage > 1 && (
+                <div onClick={() => setCurrentPage(currentPage - 1)} className="inline-block mr-4">
+                  Go to previous page
+                </div>
+              )}
+              {currentPage < totalPages && (
+                <div onClick={() => setCurrentPage(currentPage + 1)} className="inline-block">
+                  Go to next page
+                </div>
+              )}
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -5,6 +5,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
 import { GetStaticProps, GetStaticPaths } from 'next';
+import Head from 'next/head';
 
 interface Post {
   title: string;
@@ -35,22 +36,28 @@ const getPost = (slug: string) => {
   };
 };
 
-function Post({ data, content }: any) {
+const Post = ({ data, content }: any) => {
   return (
-    <div className="min-h-screen bg-primary dark:bg-dark-grey-500 font-primary text-text dark:text-primary p-5">
-      <div className="container m-auto max-w-3xl">
-        <h1 className="font-bold text-7xl mt-24 mb-4">{data.title}</h1>
-        <div className="text-gray-500 dark:text-gray-400 italic">{data.date}</div>
-        <div className="prose lg:prose-xl dark:prose-invert mt-12">
-          <MDXRemote {...content} />
+    <>
+      <Head>
+        <title>{data.title} | Posts | Rowan Paul Flynn</title>
+      </Head>
+
+      <div className="min-h-screen bg-primary dark:bg-dark-grey-500 font-primary text-text dark:text-primary p-5">
+        <div className="container m-auto max-w-3xl">
+          <h1 className="font-bold text-7xl mt-24 mb-4">{data.title}</h1>
+          <div className="text-gray-500 dark:text-gray-400 italic">{data.date}</div>
+          <div className="prose lg:prose-xl dark:prose-invert mt-12">
+            <MDXRemote {...content} />
+          </div>
+          <Link href="/posts">
+            <a className="text-blue-600 dark:text-blue-500 mt-8 mb-2 block">Back to overview</a>
+          </Link>
         </div>
-        <Link href="/posts">
-          <a className="text-blue-600 dark:text-blue-500 mt-8 mb-2 block">Back to overview</a>
-        </Link>
       </div>
-    </div>
+    </>
   );
-}
+};
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const posts = await getPosts();

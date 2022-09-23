@@ -23,7 +23,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:image" content="/icon.png" />
         <meta property="og:url" content="https://rowanpaulflynn.com" />
       </Head>
-
       <Component {...pageProps} />
     </>
   );
