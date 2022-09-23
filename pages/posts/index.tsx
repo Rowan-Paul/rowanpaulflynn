@@ -5,7 +5,6 @@ import matter from 'gray-matter';
 import { GetStaticProps } from 'next';
 import { useState } from 'react';
 import Head from 'next/head';
-import HomeIcon from '../../components/HomeIcon';
 
 const getPosts = () => {
   const files = fs.readdirSync(path.join('posts'));
