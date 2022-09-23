@@ -5,6 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import { GetStaticProps } from 'next';
 import Card from '../../components/Card';
+import Link from 'next/link';
 
 const getPosts = () => {
   const files = fs.readdirSync(path.join('posts'));
@@ -33,6 +34,10 @@ const PostsOverview = ({ posts }: any) => {
       <Head>
         <title>Posts | Rowan Paul Flynn</title>
       </Head>
+
+      <Link href="/">
+        <a className="absolute text-text dark:text-primary">Go back home</a>
+      </Link>
 
       <div className="min-h-screen bg-primary dark:bg-dark-grey-500 font-primary text-text dark:text-primary p-5">
         <div className="container m-auto max-w-3xl">

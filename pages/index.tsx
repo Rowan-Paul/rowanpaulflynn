@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import GithubIcon from '../components/GithubIcon';
 import LinkedInIcon from '../components/LinkedInIcon';
 
@@ -35,6 +36,13 @@ const Home = () => {
             <LinkedInIcon />
           </a>
         </div>
+      </div>
+      <div className="container m-auto max-w-3xl mt-20 text-center">
+        <Link href="/posts">
+          <a className="text-2xl">
+            &nbsp;&gt; <span className="hover:underline">Go to blog</span>
+          </a>
+        </Link>
       </div>
     </div>
   );
