@@ -46,7 +46,7 @@ const Post = ({ data, content }: any) => {
 
       <div className="min-h-screen p-5 bg-primary dark:bg-dark-grey-500 font-primary text-text dark:text-primary">
         <div className="container max-w-3xl m-auto">
-          <h1 className="mt-24 mb-4 font-bold text-7xl">{data.title}</h1>
+          <h1 className="mt-24 mb-4 overflow-hidden text-5xl font-bold md:text-7xl">{data.title}</h1>
           <div className="italic text-gray-500 dark:text-gray-400">{data.date}</div>
           <div className="mt-12 prose lg:prose-xl dark:prose-invert">
             <MDXRemote {...content} />
