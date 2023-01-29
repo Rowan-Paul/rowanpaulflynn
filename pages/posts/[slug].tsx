@@ -41,17 +41,18 @@ const Post = ({ data, content }: any) => {
     <>
       <Head>
         <title>{data.title} | Posts | Rowan Paul Flynn</title>
+        <meta name="description" content={data.description} />
       </Head>
 
-      <div className="min-h-screen bg-primary dark:bg-dark-grey-500 font-primary text-text dark:text-primary p-5">
-        <div className="container m-auto max-w-3xl">
-          <h1 className="font-bold text-7xl mt-24 mb-4">{data.title}</h1>
-          <div className="text-gray-500 dark:text-gray-400 italic">{data.date}</div>
-          <div className="prose lg:prose-xl dark:prose-invert mt-12">
+      <div className="min-h-screen p-5 bg-primary dark:bg-dark-grey-500 font-primary text-text dark:text-primary">
+        <div className="container max-w-3xl m-auto">
+          <h1 className="mt-24 mb-4 font-bold text-7xl">{data.title}</h1>
+          <div className="italic text-gray-500 dark:text-gray-400">{data.date}</div>
+          <div className="mt-12 prose lg:prose-xl dark:prose-invert">
             <MDXRemote {...content} />
           </div>
           <Link href="/posts">
-            <a className="text-blue-600 dark:text-blue-500 mt-8 mb-2 block">Back to overview</a>
+            <a className="block mt-8 mb-2 text-blue-600 dark:text-blue-500">Back to overview</a>
           </Link>
         </div>
       </div>
