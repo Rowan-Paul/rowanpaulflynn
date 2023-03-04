@@ -1,0 +1,31 @@
+---
+title: 'Tracktr Changelog February 2023'
+date: '4 March 2023'
+description: 'An overview of things added, changed and fixed in February'
+---
+
+Tracktr is an open-source NextJS application that allows you to keep track of movies and tv shows. It is hosted on [https://tracktr.app/](https://tracktr.app/) and you can make a free account right now.
+
+A big thing we did in February is the adding of an onboarding flow. When users sign in, they can choose a unique username and then choose whetever they would want to import data from Trakt.tv or add some movies and shows manually. We also revamped the user settings screen to look and work more like the other pages. You can also change your username (and url) on the settings page.
+
+On the /series, watchlist and series detail screen you can now add the entire series or season as watched at once without having to go to the detail page, saving you a lot of time.
+
+Another thing we did was allowing you to expand truncated descriptions so you can read what The Rock did in his life. You can also view all cast and crew in the new modals, including guest actors for tv shows.
+
+Some small issues we fixed this month:
+
+- Fixed the follow button only checking if one person followed a user, not if the signed in user is following the user
+- Redirect /profile when signed out
+- Hide seen by when signed out
+- Up next loading animation
+- Updating content in database (for example, a new season)
+- Fix history grid loading animation
+- Use a component for reviews
+- New lines now show in reviews
+- Fix 500 error after clicking search result
+- Fix trailer clipping modal
+- Press esc to close a modal
+
+For admins, we now added a review queue where reviews from users will appear so that we can approve or delete them. Currently the approved state does not figure in to showing the review, all reviews continue to be shown whetever they are approved or not. This is just a way to make sure every review gets checked and there isn't any spam on the site. We also a few new stats to the admin page; unique viewers and how many reviews people have left.
+
+Next month (or well actually this month) there will be a few large refactors and new features _looks at pull requests_ and maybe even the beginning of a mobile app (auth permitting). If you have any feedback or just want to leave a message, go to our [feedback form](https://www.tracktr.app/feedback).
