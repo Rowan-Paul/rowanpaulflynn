@@ -4,22 +4,22 @@ import LinkedInIcon from '../components/LinkedInIcon';
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-primary dark:bg-dark-grey-500 font-primary text-text dark:text-primary p-5">
-      <div className="container m-auto max-w-3xl">
-        <h1 className="text-8xl font-extrabold py-10 md:underline decoration-light-blue">Rowan Paul Flynn</h1>
+    <div className="min-h-screen p-5 bg-primary dark:bg-dark-grey-500 font-primary text-text dark:text-primary">
+      <div className="container max-w-3xl m-auto">
+        <h1 className="py-10 font-extrabold text-8xl md:underline decoration-light-blue">Rowan Paul Flynn</h1>
         <p className="text-2xl md:text-3xl">
           Hi, my name is Rowan Paul Flynn. I&apos;m a web developer with a love for all things Javascript. I have
           experience with frameworks such as React, Next &amp; Strapi.
         </p>
       </div>
-      <div className="container m-auto max-w-3xl mt-20 text-center">
-        <h2 className="text-2xl md:text-4xl mb-2">Contact me</h2>
+      <div className="container max-w-3xl m-auto mt-20 text-center">
+        <h2 className="mb-2 text-2xl md:text-4xl">Contact me</h2>
         <a
           href="mailto:contact@rowanpaulflynn.com"
           target="_blank"
           rel="noreferrer"
           aria-label="Email"
-          className="underline decoration-light-blue text-2xl"
+          className="text-2xl underline decoration-light-blue"
         >
           contact@rowanpaulflynn.com
         </a>
@@ -37,11 +37,11 @@ const Home = () => {
           </a>
         </div>
       </div>
-      <div className="container m-auto max-w-3xl mt-20 text-center">
-        <Link href="/posts">
-          <a className="text-2xl">
+      <div className="container max-w-3xl m-auto mt-20 text-center">
+        <Link href="/posts" className="text-2xl">
+          <>
             &nbsp;&gt; <span className="hover:underline">Go to blog</span>
-          </a>
+          </>
         </Link>
       </div>
     </div>

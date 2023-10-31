@@ -70,7 +70,7 @@ const PostsOverview = ({ posts }: any) => {
             <div>{post.data.description}</div>
 
             <Link href="/[slug]" as={`/${post.slug}`}>
-              <a>Read the entire post</a>
+              Read the entire post
             </Link>
           </div>
         ))
@@ -143,7 +143,7 @@ const Post = ({ data, content }: any) => {
         <MDXRemote {...content} />
       </div>
       <Link href="/">
-        <a>Back to overview</a>
+        Back to overview
       </Link>
     </div>
   );

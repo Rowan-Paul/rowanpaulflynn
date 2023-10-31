@@ -51,8 +51,8 @@ const Post = ({ data, content }: any) => {
           <div className="mt-12 prose lg:prose-xl dark:prose-invert">
             <MDXRemote {...content} />
           </div>
-          <Link href="/posts">
-            <a className="block mt-8 mb-2 text-blue-600 dark:text-blue-500">Back to overview</a>
+          <Link href="/posts" className="block mt-8 mb-2 text-blue-600 dark:text-blue-500">
+            Back to overview
           </Link>
         </div>
       </div>

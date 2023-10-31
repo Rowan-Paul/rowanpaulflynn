@@ -35,13 +35,13 @@ const PostsOverview = ({ posts }: any) => {
         <title>Posts | Rowan Paul Flynn</title>
       </Head>
 
-      <Link href="/">
-        <a className="absolute text-text dark:text-primary">Go back home</a>
+      <Link href="/" className="absolute text-text dark:text-primary">
+        Go back home
       </Link>
 
-      <div className="min-h-screen bg-primary dark:bg-dark-grey-500 font-primary text-text dark:text-primary p-5">
-        <div className="container m-auto max-w-3xl">
-          <h1 className="mt-24 mb-12 font-bold text-3xl">Latest Posts</h1>
+      <div className="min-h-screen p-5 bg-primary dark:bg-dark-grey-500 font-primary text-text dark:text-primary">
+        <div className="container max-w-3xl m-auto">
+          <h1 className="mt-24 mb-12 text-3xl font-bold">Latest Posts</h1>
           {posts.length > 0 ? (
             posts
               .slice((currentPage - 1) * pageSize, currentPage * pageSize)
@@ -58,7 +58,7 @@ const PostsOverview = ({ posts }: any) => {
             <div>No posts yet...</div>
           )}
           {totalPages > 1 && (
-            <div className="cursor-pointer mt-8 mb-2">
+            <div className="mt-8 mb-2 cursor-pointer">
               {currentPage > 1 && (
                 <div onClick={() => setCurrentPage(currentPage - 1)} className="inline-block mr-4">
                   Go to previous page
