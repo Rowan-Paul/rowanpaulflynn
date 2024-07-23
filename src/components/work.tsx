@@ -2,7 +2,7 @@ import Project from './project';
 
 const Work = () => {
   return (
-    <section id="work" className="w-full py-12 md:py-24 lg:py-32 bg-muted h-[100dvh] flex items-center">
+    <section id="work" className="w-full py-12 md:py-24 lg:py-32 bg-muted h-[100dvh]">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
@@ -12,7 +12,7 @@ const Work = () => {
             </p>
           </div>
         </div>
-        <div className="grid items-center max-w-5xl gap-6 py-12 mx-auto lg:grid-cols-2 lg:gap-12">
+        <div className="max-w-5xl gap-6 py-12 mx-auto lg:grid lg:items-center lg:grid-cols-2 lg:gap-12">
           <Project
             link="https://github.com/Tracktr/tracktr"
             image="/placeholder.svg"
