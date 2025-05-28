@@ -52,7 +52,8 @@ export default function Page() {
                     </span>
                   </h1>
                   <p className="text-xl text-white/80 leading-relaxed">
-                    Full-stack developer focused on building intuitive applications, exploring new technologies, and embracing innovative approaches to problem-solving.
+                    Full-stack developer focused on building intuitive applications, exploring new technologies, and
+                    embracing innovative approaches to problem-solving.
                   </p>
                 </div>
               </div>
@@ -109,7 +110,7 @@ export default function Page() {
                     width={400}
                     height={600}
                     className="object-contain object-center w-full"
-                    style={{ maxHeight: "550px" }}
+                    style={{ maxHeight: '550px' }}
                   />
                 </div>
               </div>
@@ -124,7 +125,9 @@ export default function Page() {
             <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-8 shadow-xl inline-block">
               <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
               <p className="text-white/80 text-lg max-w-2xl">
-                I&apos;m a passionate developer with 3 years of experience building web applications. When I see a problem, I love trying to fix it with my own solution. I enjoy learning new technologies and applying them to create efficient and user-friendly applications.
+                I&apos;m a passionate developer with 3 years of experience building web applications. When I see a
+                problem, I love trying to fix it with my own solution. I enjoy learning new technologies and applying
+                them to create efficient and user-friendly applications.
               </p>
             </div>
           </div>
@@ -207,7 +210,8 @@ export default function Page() {
             {[
               {
                 title: 'Tracktr',
-                description: 'A platform to track movies and shows across all streaming services, connect with friends, and share reviews.',
+                description:
+                  'A platform to track movies and shows across all streaming services, connect with friends, and share reviews.',
                 image: '/tracktr.png',
                 url: 'https://tracktr.app',
                 tags: ['Next.js', 'T3 stack', 'TMDB integration']
@@ -221,52 +225,41 @@ export default function Page() {
               },
               {
                 title: 'OpenWatch',
-                description: 'An open source alternative to JustWatch - an API for finding where movies can be watched across streaming platforms.',
+                description:
+                  'An open source alternative to JustWatch - an API for finding where movies can be watched across streaming platforms.',
                 image: '/openwatch.png',
                 url: 'https://openwatch.xyz',
                 tags: ['NestJS', 'API Development', 'Open Source']
               }
             ].map((project, index) => (
-              <Card
-                key={index}
-                className="backdrop-blur-md bg-white/10 border-white/20 shadow-xl overflow-hidden group hover:scale-105 transition-transform duration-300"
-              >
-                <div className="relative">
-                  <Image
-                    src={project.image || '/placeholder.svg'}
-                    alt={project.title}
-                    width={300}
-                    height={200}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Link
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-md h-8 w-8 bg-white/20 border-white/30 text-white hover:bg-white/30"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                    </Link>
+              <Link href={project.url} target="_blank" rel="noopener noreferrer" key={index} className="block">
+                <Card className="backdrop-blur-md bg-white/10 border-white/20 shadow-xl overflow-hidden group hover:scale-105 transition-transform duration-300 h-full flex flex-col">
+                  <div className="relative">
+                    <Image
+                      src={project.image || '/placeholder.svg'}
+                      alt={project.title}
+                      width={300}
+                      height={200}
+                      className="w-full h-48 object-cover"
+                    />
                   </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-white mb-3">{project.title}</h3>
-                  <p className="text-white/80 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, tagIndex) => (
-                      <Badge
-                        key={tagIndex}
-                        variant="secondary"
-                        className="backdrop-blur-sm bg-white/20 border-white/30 text-white"
-                      >
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                  <CardContent className="p-6 flex-grow flex flex-col">
+                    <h3 className="text-xl font-semibold text-white mb-3">{project.title}</h3>
+                    <p className="text-white/80 mb-4 flex-grow">{project.description}</p>
+                    <div className="flex flex-wrap gap-2 mt-auto">
+                      {project.tags.map((tag, tagIndex) => (
+                        <Badge
+                          key={tagIndex}
+                          variant="secondary"
+                          className="backdrop-blur-sm bg-white/20 border-white/30 text-white"
+                        >
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
@@ -274,7 +267,6 @@ export default function Page() {
 
       <section id="contact" className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-
           <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl p-8 shadow-xl text-center">
             <p className="text-white/80 text-lg mb-6">Reach out to me directly via email:</p>
             <Link
@@ -293,7 +285,9 @@ export default function Page() {
           <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-8 shadow-xl">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="text-white font-bold text-xl mb-4 md:mb-0">{'<RPF />'}</div>
-              <div className="text-white/60 text-sm mt-4 md:mt-0">© {new Date().getFullYear()} Rowan-Paul Flynn. All rights reserved.</div>
+              <div className="text-white/60 text-sm mt-4 md:mt-0">
+                © {new Date().getFullYear()} Rowan-Paul Flynn. All rights reserved.
+              </div>
             </div>
           </div>
         </div>
