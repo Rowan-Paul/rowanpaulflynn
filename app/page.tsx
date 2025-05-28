@@ -1,6 +1,6 @@
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import { Github, Linkedin, Mail, ExternalLink, Code, Database, ArrowRight } from 'lucide-react';
+import { Github, Linkedin, Mail, Code, Database, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -100,7 +100,7 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="relative flex items-center justify-center lg:justify-end h-full pt-4 lg:pt-0 hidden lg:block">
+            <div className="relative flex items-center justify-center lg:justify-end h-full pt-4 lg:pt-0 lg:block">
               <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl p-3 shadow-xl">
                 <div className="overflow-hidden rounded-2xl">
                   <Image
