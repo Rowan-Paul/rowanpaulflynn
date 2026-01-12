@@ -1,19 +1,19 @@
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-white text-neutral-900">
-      <div className="mx-auto max-w-4xl px-6 py-20">
+    <main className="animated-gradient-bg min-h-screen text-[#f5f5f7]">
+      <div className="relative z-10 mx-auto max-w-4xl px-6 py-20">
         <header className="mb-20">
-          <h1 className="mb-4 text-5xl font-semibold tracking-tight text-neutral-900 sm:text-6xl">
+          <h1 className="gradient-text mb-4 text-5xl font-semibold tracking-tight sm:text-6xl">
             Rowan-Paul Flynn
           </h1>
-          <p className="mb-2 text-xl text-neutral-600">Full-Stack Developer</p>
-          <p className="mb-8 text-neutral-500">
+          <p className="mb-2 text-xl text-[#a1a1aa]">Full-Stack Developer</p>
+          <p className="mb-8 text-[#71717a]">
             Building intuitive applications and exploring innovative approaches
             to problem-solving
           </p>
           <a
             href="mailto:contact@rowanpaulflynn.com"
-            className="inline-block rounded-lg bg-neutral-900 px-6 py-3 text-white transition-colors hover:bg-neutral-700"
+            className="glass-button inline-block rounded-lg px-6 py-3 font-medium text-white"
           >
             Get in touch
           </a>
@@ -21,12 +21,14 @@ export default function HomePage() {
 
         <section className="mb-20">
           <h2 className="mb-6 text-2xl font-semibold">About</h2>
-          <p className="leading-relaxed text-neutral-700">
-            I&apos;m a passionate developer with 3 years of experience building
-            web applications. When I see a problem, I love trying to fix it with
-            my own solution. I enjoy learning new technologies and applying them
-            to create efficient and user-friendly applications.
-          </p>
+          <div className="glass-card rounded-lg p-6">
+            <p className="leading-relaxed text-[#d4d4d8]">
+              I&apos;m a passionate developer with over 3 years of experience
+              building web applications. When I see a problem, I love trying to
+              fix it with my own solution. I enjoy learning new technologies and
+              applying them to create efficient and user-friendly applications.
+            </p>
+          </div>
         </section>
 
         <section>
@@ -36,23 +38,23 @@ export default function HomePage() {
               href="https://tracktr.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-lg border border-neutral-200 p-6 transition-all hover:border-neutral-300 hover:shadow-md"
+              className="project-card group block rounded-lg p-6"
             >
-              <h3 className="mb-3 text-lg font-semibold text-neutral-900 group-hover:text-neutral-600">
+              <h3 className="mb-3 text-lg font-semibold transition-colors group-hover:text-[#00d4ff]">
                 Tracktr
               </h3>
-              <p className="mb-4 text-sm text-neutral-600">
+              <p className="mb-4 text-sm text-[#a1a1aa]">
                 A platform to track movies and shows across all streaming
                 services, connect with friends, and share reviews.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="rounded-full bg-neutral-100 px-2 py-1 text-xs text-neutral-600">
+                <span className="glass-pill rounded-full px-3 py-1 text-xs">
                   tRPC
                 </span>
-                <span className="rounded-full bg-neutral-100 px-2 py-1 text-xs text-neutral-600">
+                <span className="glass-pill rounded-full px-3 py-1 text-xs">
                   Next.js
                 </span>
-                <span className="rounded-full bg-neutral-100 px-2 py-1 text-xs text-neutral-600">
+                <span className="glass-pill rounded-full px-3 py-1 text-xs">
                   TMDB API
                 </span>
               </div>
@@ -62,17 +64,17 @@ export default function HomePage() {
               href="https://gwentcards.net"
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-lg border border-neutral-200 p-6 transition-all hover:border-neutral-300 hover:shadow-md"
+              className="project-card group block rounded-lg p-6"
             >
-              <h3 className="mb-3 text-lg font-semibold text-neutral-900 group-hover:text-neutral-600">
+              <h3 className="mb-3 text-lg font-semibold transition-colors group-hover:text-[#00d4ff]">
                 GWENTcards
               </h3>
-              <p className="mb-4 text-sm text-neutral-600">
+              <p className="mb-4 text-sm text-[#a1a1aa]">
                 A website to collect, filter and track cards from the GWENT
                 minigame in The Witcher 3.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="rounded-full bg-neutral-100 px-2 py-1 text-xs text-neutral-600">
+                <span className="glass-pill rounded-full px-3 py-1 text-xs">
                   Next.js
                 </span>
               </div>
@@ -82,28 +84,28 @@ export default function HomePage() {
               href="https://vraaghetfred.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-lg border border-neutral-200 p-6 transition-all hover:border-neutral-300 hover:shadow-md"
+              className="project-card group block rounded-lg p-6"
             >
-              <h3 className="mb-3 text-lg font-semibold text-neutral-900 group-hover:text-neutral-600">
+              <h3 className="mb-3 text-lg font-semibold transition-colors group-hover:text-[#00d4ff]">
                 Vraag Het Fred
               </h3>
-              <p className="mb-4 text-sm text-neutral-600">
+              <p className="mb-4 text-sm text-[#a1a1aa]">
                 Your AI Powered assistant built with Expo and the Gemini API
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="rounded-full bg-neutral-100 px-2 py-1 text-xs text-neutral-600">
+                <span className="glass-pill rounded-full px-3 py-1 text-xs">
                   Expo
                 </span>
-                <span className="rounded-full bg-neutral-100 px-2 py-1 text-xs text-neutral-600">
+                <span className="glass-pill rounded-full px-3 py-1 text-xs">
                   React Native
                 </span>
-                <span className="rounded-full bg-neutral-100 px-2 py-1 text-xs text-neutral-600">
+                <span className="glass-pill rounded-full px-3 py-1 text-xs">
                   NestJS
                 </span>
-                <span className="rounded-full bg-neutral-100 px-2 py-1 text-xs text-neutral-600">
+                <span className="glass-pill rounded-full px-3 py-1 text-xs">
                   TypeORM
                 </span>
-                <span className="rounded-full bg-neutral-100 px-2 py-1 text-xs text-neutral-600">
+                <span className="glass-pill rounded-full px-3 py-1 text-xs">
                   Gemini API
                 </span>
               </div>
@@ -111,10 +113,9 @@ export default function HomePage() {
           </div>
         </section>
 
-        <footer className="mt-20 border-t border-neutral-200 pt-8">
-          <p className="text-sm text-neutral-500">
-            © {new Date().getFullYear()} Rowan-Paul Flynn. Built with Next.js
-            and Tailwind CSS.
+        <footer className="mt-20 border-t border-[rgba(255,255,255,0.1)] pt-8">
+          <p className="text-sm text-[#71717a]">
+            © {new Date().getFullYear()} Rowan-Paul Flynn. Built with ❤️.
           </p>
         </footer>
       </div>
