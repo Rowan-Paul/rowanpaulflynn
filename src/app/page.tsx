@@ -11,12 +11,22 @@ export default function HomePage() {
             Building intuitive applications and exploring innovative approaches
             to problem-solving
           </p>
-          <a
-            href="mailto:contact@rowanpaulflynn.com"
-            className="glass-button inline-block rounded-lg px-6 py-3 font-medium text-white"
-          >
-            Get in touch
-          </a>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="mailto:contact@rowanpaulflynn.com"
+              className="glass-button inline-block rounded-lg px-6 py-3 font-medium text-white"
+            >
+              Get in touch
+            </a>
+            <a
+              href="https://github.com/Rowan-Paul/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-button inline-block rounded-lg px-6 py-3 font-medium text-white"
+            >
+              GitHub
+            </a>
+          </div>
         </header>
 
         <section className="mb-20">
