@@ -45,27 +45,27 @@ export default function HomePage() {
           <h2 className="mb-6 text-2xl font-semibold">Featured Projects</h2>
           <div className="grid gap-6 md:grid-cols-3">
             <a
-              href="https://tracktr.app"
+              href="https://opnshelf.xyz"
               target="_blank"
               rel="noopener noreferrer"
               className="project-card group block rounded-lg p-6"
             >
               <h3 className="mb-3 text-lg font-semibold transition-colors group-hover:text-[#00d4ff]">
-                Tracktr
+                OpnShelf
               </h3>
               <p className="mb-4 text-sm text-[#a1a1aa]">
-                A platform to track movies and shows across all streaming
-                services, connect with friends, and share reviews.
+                A personal media tracker built on the AT Protocol. Track movies
+                and TV shows while keeping full control of your data.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="glass-pill rounded-full px-3 py-1 text-xs">
-                  tRPC
+                  AT Protocol
                 </span>
                 <span className="glass-pill rounded-full px-3 py-1 text-xs">
-                  Next.js
+                  NestJS
                 </span>
                 <span className="glass-pill rounded-full px-3 py-1 text-xs">
-                  TMDB API
+                  TanStack
                 </span>
               </div>
             </a>
