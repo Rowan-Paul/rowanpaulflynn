@@ -166,7 +166,7 @@ async function enrichTangled(
   v: Record<string, unknown>,
 ): Promise<TangledEnrichment | null> {
   if (nsid === "sh.tangled.feed.star") {
-    const subject = v["subject"];
+    const subject = v.subject;
     if (typeof subject === "string") {
       const ref = parseAtUri(subject);
       if (!ref) return null;
@@ -324,7 +324,7 @@ function bskyPost(
   const mediaType = media ? str(media, "$type") : null;
 
   if (media && mediaType === "app.bsky.embed.images") {
-    const raw = media["images"];
+    const raw = media.images;
     if (Array.isArray(raw)) {
       images = raw
         .flatMap((entry): BskyImage[] => {
