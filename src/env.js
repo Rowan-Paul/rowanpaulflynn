@@ -8,6 +8,12 @@ export const env = createEnv({
    */
   server: {
     NODE_ENV: z.enum(["development", "test", "production"]),
+    /**
+     * TMDB v3 API key, used to enrich OpnShelf activity (media id -> title +
+     * poster) in the "From the atmosphere" section. Optional: when absent, those
+     * items degrade gracefully to a plain "Watched an episode (S5E6)" label.
+     */
+    TMDB_API_KEY: z.string().optional(),
   },
 
   /**
@@ -25,6 +31,7 @@ export const env = createEnv({
    */
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
+    TMDB_API_KEY: process.env.TMDB_API_KEY,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**

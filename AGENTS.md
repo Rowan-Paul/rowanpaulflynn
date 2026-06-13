@@ -99,4 +99,9 @@
 - React 19 with strict mode
 - TypeScript 5.8+ with verbatim module syntax
 - Package manager: pnpm
-- No external API calls or database currently configured
+- No database configured
+- External API calls: the "From the atmosphere" section (see `src/lib/atproto.ts`,
+  `src/lib/atmosphere.ts`, `src/app/_components/AtmosphereSection.tsx`) reads the
+  owner's AT Protocol repo (plc.directory + their PDS) and optionally enriches
+  OpnShelf media via TMDB (`TMDB_API_KEY`, server-only, optional). All fetches are
+  server-side and ISR-cached; see `docs/adr/0001-generic-repo-crawl-hybrid-render.md`.

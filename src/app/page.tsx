@@ -1,3 +1,5 @@
+import AtmosphereSection from "@/app/_components/AtmosphereSection";
+
 export default function HomePage() {
   return (
     <main className="animated-gradient-bg min-h-screen text-[#f5f5f7]">
@@ -41,7 +43,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section>
+        <section className="mb-20">
           <h2 className="mb-6 text-2xl font-semibold">Featured Projects</h2>
           <div className="grid gap-6 md:grid-cols-3">
             <a
@@ -122,6 +124,8 @@ export default function HomePage() {
             </a>
           </div>
         </section>
+
+        <AtmosphereSection />
 
         <footer className="mt-20 border-t border-[rgba(255,255,255,0.1)] pt-8">
           <p className="text-sm text-[#71717a]">
