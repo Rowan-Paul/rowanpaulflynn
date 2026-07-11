@@ -139,3 +139,26 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+.work-notes-atmosphere .glass-card,
+.work-notes-atmosphere .project-card {
+  border-color: rgba(227, 224, 214, 0.18);
+  background: #1d1d1a;
+  box-shadow: none;
+}
+
+.work-notes-atmosphere .project-card:hover {
+  border-color: #d59a55;
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+
+.work-notes-atmosphere .glass-pill {
+  border-color: rgba(227, 224, 214, 0.18);
+  background: #24241f;
+}
+
+.work-notes-atmosphere .glass-pill:hover {
+  border-color: #d59a55;
+  box-shadow: none;
+}
